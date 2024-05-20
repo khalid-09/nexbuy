@@ -138,7 +138,7 @@ const products: Product[] = [
     discount: 10,
     shortDescription: "High Quality Speakers",
     images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/marshall/speaker${i + 1}.jpeg`,
+      (_, i) => `/earbuds/marshall/ear${i + 1}.jpeg`,
     ),
   },
   {
@@ -240,7 +240,7 @@ const products: Product[] = [
     discount: 10,
     shortDescription: "High Quality Laptops",
     images: Array.from({ length: 4 }).map(
-      (_, i) => `/laptops/macbooks/macbook${i + 1}.jpg`,
+      (_, i) => `/laptops/macbooks/mackbook${i + 1}.jpg`,
     ),
   },
   {

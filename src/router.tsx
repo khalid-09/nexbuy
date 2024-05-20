@@ -5,7 +5,8 @@ import ErrorLayout from "./layout/ErrorLayout";
 import Shop from "./pages/Shop";
 import LandingLayout from "./layout/LandingLayout";
 import Landing from "./pages/Landing";
-import Products from "./pages/Products";
+import AllProducts from "./pages/AllProducts";
+import Product from "./pages/Product";
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
@@ -18,9 +19,15 @@ const router: Router = createBrowserRouter([
         element: <LandingLayout />,
         children: [
           { path: "/", element: <Landing /> },
-          { path: "/contact", element: <Contact /> },
-          { path: "/shop", element: <Shop /> },
-          { path: "/products", element: <Products /> },
+          { path: "contact", element: <Contact /> },
+          { path: "shop", element: <Shop /> },
+          {
+            path: "products",
+            children: [
+              { index: true, element: <AllProducts /> },
+              { path: ":id", element: <Product /> },
+            ],
+          },
         ],
       },
     ],
