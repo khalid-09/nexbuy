@@ -1,9 +1,10 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="m-auto flex h-dvh max-w-6xl flex-col items-center  px-4 md:-translate-y-10  md:flex-row ">
+    <section className="m-auto flex h-dvh max-w-6xl flex-col items-center  px-4 md:-translate-y-10  md:flex-row ">
       <div className="mt-20 w-full space-y-4 md:mt-0 md:w-2/3">
         <p className="text-lg font-medium">Welcome to shopping paradise</p>
         <h1 className="text-3xl font-bold text-foreground md:text-5xl">
@@ -15,13 +16,15 @@ const Hero = () => {
           tech gadgets to stylish fashion trends, our handpicked selections
           cater to your every need.
         </p>
-        <Button className="space-x-2">
-          <span>Shop Now</span>
-          <ArrowRightIcon />
+        <Button className="space-x-2" asChild>
+          <Link to="/products">
+            <span>Shop Now</span>
+            <ArrowRightIcon />
+          </Link>
         </Button>
       </div>
       <div className="w-full md:w-1/3">Image</div>
-    </div>
+    </section>
   );
 };
 
