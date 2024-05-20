@@ -3,7 +3,7 @@ import Hero from "@/components/hero";
 
 const Landing = () => {
   return (
-    <main className="font-poppins h-dvh bg-green-200">
+    <main className="h-dvh bg-green-200 font-poppins">
       <Hero />
       <BestSelling />
     </main>
