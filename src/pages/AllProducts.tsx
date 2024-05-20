@@ -20,10 +20,11 @@ const AllProducts = () => {
   };
 
   return (
-    <section className="m-auto max-w-6xl font-poppins">
-      <div className="grid grid-cols-4 gap-4">
+    <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
+      <h2 className="mb-4 font-poet text-3xl">All Products</h2>
+      <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {loading && <AllProductSkeleton />}
-        {products.map((product) => (
+        {products.slice(0, 8).map((product) => (
           <Link to={`/products/${product.id}`} key={product.id}>
             <Card className="overflow-hidden">
               <CardHeader className="relative mb-0 h-56">

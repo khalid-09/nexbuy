@@ -77,7 +77,7 @@ const BestSelling = () => {
           ))}
         </TabsContent>
         <TabsContent
-          className=" grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4"
+          className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4"
           value="all"
         >
           <FirstProduct />
