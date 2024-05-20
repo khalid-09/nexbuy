@@ -9,7 +9,7 @@ import { links } from "@/constants";
 
 const Navbar = () => {
   return (
-    <nav className="font-poppins m-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-6 text-base">
+    <nav className="m-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-6 font-poppins text-base">
       <Logo />
       <ul className=" hidden items-center  gap-4 md:flex">
         {links.map((link) => (
@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <Input placeholder="Search Product." className="  md:w-1/4" />
+      <Input placeholder="Search Product." className="md:w-1/4" />
       <div className="flex  items-center gap-1 md:gap-2">
         <Link to="/account" className="flex items-center gap-1">
           <Avatar>
