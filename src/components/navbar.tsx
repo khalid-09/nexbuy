@@ -13,8 +13,14 @@ const Navbar = () => {
       <Logo />
       <ul className=" hidden items-center  gap-4 md:flex">
         {links.map((link) => (
-          <li key={link.to} className="font-medium">
-            <Link to={link.to}>{link.label}</Link>
+          <li key={link.to}>
+            {!link.disable ? (
+              <Link className="font-semibold" to={link.to}>
+                {link.label}
+              </Link>
+            ) : (
+              <span className="text-muted-foreground">{link.label}</span>
+            )}
           </li>
         ))}
       </ul>
