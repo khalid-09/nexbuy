@@ -1,13 +1,8 @@
-import Navbar from "./components/navbar";
-import { Button } from "./components/ui/button";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 const App = () => {
-  return (
-    <div className="text-5xl text-red-500 underline md:text-green-100">
-      <Navbar />
-      <Button>App</Button>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
