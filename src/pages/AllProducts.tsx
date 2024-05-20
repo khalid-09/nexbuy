@@ -10,8 +10,8 @@ import {
 import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import FirstProductSkeleton from "@/components/first-product-skeleton";
 import { Link } from "react-router-dom";
+import AllProductSkeleton from "@/components/all-product-skelton";
 const AllProducts = () => {
   const [loading, setLoading] = useState(true);
 
@@ -21,8 +21,8 @@ const AllProducts = () => {
 
   return (
     <section className="m-auto max-w-6xl font-poppins">
-      {loading && <FirstProductSkeleton />}
       <div className="grid grid-cols-4 gap-4">
+        {loading && <AllProductSkeleton />}
         {products.map((product) => (
           <Link to={`/products/${product.id}`} key={product.id}>
             <Card className="overflow-hidden">

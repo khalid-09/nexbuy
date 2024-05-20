@@ -22,8 +22,12 @@ const BestSelling = () => {
             <TabsTrigger className="px-4" value="all">
               All
             </TabsTrigger>
-            <TabsTrigger value="clothes">Clothes</TabsTrigger>
-            <TabsTrigger value="laptops">Laptops</TabsTrigger>
+            <TabsTrigger value="clothes" disabled>
+              Clothes
+            </TabsTrigger>
+            <TabsTrigger value="laptops" disabled>
+              Laptops
+            </TabsTrigger>
             <TabsTrigger value="furnitures" disabled>
               Furnitures
             </TabsTrigger>
@@ -37,7 +41,7 @@ const BestSelling = () => {
               Mobiles
             </TabsTrigger>
             <TabsTrigger value="fruits" disabled>
-              Fruits
+              Earbuds
             </TabsTrigger>
           </div>
         </TabsList>
