@@ -1,80 +1,107 @@
-import products from "@/data/products";
+// import products from "@/data/products";
 
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+// // import {
+// //   Card,
+// //   CardContent,
+// //   CardFooter,
+// //   CardHeader,
+// //   CardTitle,
+// // } from "@/components/ui/card";
+// // import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
+// // import { Button } from "@/components/ui/button";
+// // import { Link } from "react-router-dom";
+// // import { formatCurrency } from "@/lib/utils";
+// // import { Badge } from "@/components/ui/badge";
+// import AllProductSkeleton from "@/components/all-product-skelton";
+// import { useState } from "react";
+// import Seo from "@/components/seo";
+// import ProductCard from "@/components/ui/product-card";
+// import ProductPagination from "@/components/ProductPagination";
+
+// const AllProducts = () => {
+//   const [loading, setLoading] = useState(true);
+
+//   return (
+//     <>
+//       <Seo
+//         title="All Products"
+//         description="List of all products available at NEXBUY. Buy now!"
+//         type="Clothing, Laptops, Mobiles, Furnitures, Skincare Products,"
+//       />
+//       <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
+//         <h2 className="mb-4 font-poet text-3xl">All Products</h2>
+//         <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+//           {loading && <AllProductSkeleton />}
+//           {products.map((product) => (
+//             <ProductCard
+//               product={product}
+//               loading={loading}
+//               setLoading={setLoading}
+//             />
+//           ))}
+//         </div>
+//       </section>
+//       <ProductPagination count={products.length} />
+//     </>
+//   );
+// };
+// export default AllProducts;
+
+import products from "@/data/products";
 import AllProductSkeleton from "@/components/all-product-skelton";
-import { formatCurrency } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
+import Seo from "@/components/seo";
+import ProductCard from "@/components/ui/product-card";
+import ProductPagination from "@/components/ProductPagination";
+
+const PAGE_SIZE = 8;
+
 const AllProducts = () => {
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const handleImageLoad = () => {
-    setLoading(false);
-  };
+  // Calculate the indices for slicing the products array
+  const startIdx = (currentPage - 1) * PAGE_SIZE;
+  const endIdx = startIdx + PAGE_SIZE;
+
+  useEffect(() => {
+    // Simulate a delay to showcase the skeleton loader
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the delay as needed
+  }, [startIdx]);
 
   return (
-    <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
-      <h2 className="mb-4 font-poet text-3xl">All Products</h2>
-      <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-        {loading && <AllProductSkeleton />}
-        {products.slice(0, 8).map((product) => (
-          <Link state={product} to={`/products/${product.id}`} key={product.id}>
-            <Card className="overflow-hidden">
-              <CardHeader className="relative mb-0 h-56">
-                <img
-                  className={`absolute inset-0 h-full w-full object-cover ${
-                    loading ? "hidden" : ""
-                  }`}
-                  src={product.images[0]}
-                  onLoad={handleImageLoad}
-                  alt={product.name}
-                  loading="lazy"
+    <>
+      <Seo
+        title="All Products"
+        description="List of all products available at NEXBUY. Buy now!"
+        type="Clothing, Laptops, Mobiles, Furnitures, Skincare Products,"
+      />
+      <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
+        <h2 className="mb-4 font-poet text-3xl">All Products</h2>
+        <div className=" grid grid-cols-2 gap-4  sm:grid-cols-3 md:grid-cols-4">
+          {loading && <AllProductSkeleton />}
+          {!loading &&
+            products
+              .slice(startIdx, endIdx)
+              .map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  loading={loading}
+                  setLoading={setLoading}
                 />
-              </CardHeader>
-              <CardContent className="mt-2 space-y-2 px-6 md:mt-0 md:px-6 md:py-4">
-                <div className="flex w-full items-center justify-between">
-                  <CardTitle>{product.name}</CardTitle>
-                  <p className="text-muted-foreground">
-                    {formatCurrency(product.price)}
-                  </p>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    {product.rating > 4.5 ? (
-                      Array.from({ length: 5 }).map((_, i) => (
-                        <StarFilledIcon key={i} className="text-primary" />
-                      ))
-                    ) : (
-                      <>
-                        {Array.from({ length: 4 }).map((_, i) => (
-                          <StarFilledIcon key={i} className="text-primary" />
-                        ))}
-                        <StarIcon className="text-primary" />
-                      </>
-                    )}
-                  </div>
-                  {product.discount && (
-                    <Badge variant="outline">{`${product.discount}% Off`}</Badge>
-                  )}
-                </div>
-              </CardContent>
-              <CardFooter className="mt-0 px-4 md:px-6">
-                <Button variant="outline">Add to Cart</Button>
-              </CardFooter>
-            </Card>
-          </Link>
-        ))}
-      </div>
-    </section>
+              ))}
+        </div>
+      </section>
+      <ProductPagination
+        count={products.length}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
+    </>
   );
 };
+
 export default AllProducts;
