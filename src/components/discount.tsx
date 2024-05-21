@@ -34,7 +34,7 @@ const Discount = () => {
           </Button>
         </CardFooter>
       </Card>
-      <Card className="w-full bg-green-200 px-4 py-6 dark:bg-background  dark:bg-card">
+      <Card className="w-full bg-green-200 px-4 py-6 dark:bg-card">
         <CardHeader>
           <CardDescription>
             <span>Regular Offer </span>

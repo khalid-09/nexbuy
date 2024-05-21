@@ -1,7 +1,7 @@
 import { Category, Product } from "@/data/types";
 import products from "@/data/products";
 import FirstProductSkeleton from "./FirstProductSkeleton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../ui/product-card";
 
 const getFirstProductFromEachCategory = (products: Product[]): Product[] => {
@@ -20,16 +20,23 @@ const firstProducts = getFirstProductFromEachCategory(products);
 const FirstProduct = () => {
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
       {loading && <FirstProductSkeleton />}
-      {firstProducts.map((product) => (
-        <ProductCard
-          product={product}
-          loading={loading}
-          setLoading={setLoading}
-        />
-      ))}
+      {!loading &&
+        firstProducts.map((product) => (
+          <ProductCard
+            product={product}
+            loading={loading}
+            setLoading={setLoading}
+          />
+        ))}
     </>
   );
 };
