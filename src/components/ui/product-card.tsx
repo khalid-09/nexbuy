@@ -28,6 +28,7 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
             src={product.images[0]}
             onLoad={handleImageLoad}
             alt={product.name}
+            loading="lazy"
           />
         </CardHeader>
         <CardContent className="mt-2 space-y-2 px-6 md:mt-0 md:px-6 md:py-4">

@@ -60,15 +60,13 @@ const AllProducts = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Calculate the indices for slicing the products array
   const startIdx = (currentPage - 1) * PAGE_SIZE;
   const endIdx = startIdx + PAGE_SIZE;
 
   useEffect(() => {
-    // Simulate a delay to showcase the skeleton loader
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust the delay as needed
+    }, 2000);
   }, []);
 
   return (
@@ -80,7 +78,7 @@ const AllProducts = () => {
       />
       <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
         <h2 className="mb-4 font-poet text-3xl">All Products</h2>
-        <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <div className=" grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4">
           {loading && <AllProductSkeleton />}
           {!loading &&
             products
