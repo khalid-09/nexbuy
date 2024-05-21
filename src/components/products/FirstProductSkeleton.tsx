@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Skeleton } from "../ui/skeleton";
 
 const FirstProductSkeleton = () => {
   return Array.from({ length: 4 }).map((_, i) => (

@@ -19,11 +19,11 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
 
   return (
     <Link to={`/products/${product.id}`} state={product} key={product.id}>
-      <Card className="overflow-hidden">
+      <Card className="overflow-hidden transition hover:scale-105">
         <CardHeader className="relative mb-0 h-56">
           <img
             className={`absolute inset-0 h-full w-full object-cover ${
-              loading ? "hidden" : ""
+              loading ? "blur-sm" : ""
             }`}
             src={product.images[0]}
             onLoad={handleImageLoad}
@@ -31,15 +31,15 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
             loading="lazy"
           />
         </CardHeader>
-        <CardContent className="mt-2 space-y-2 px-6 md:mt-0 md:px-6 md:py-4">
-          <div className="flex w-full items-center justify-between">
+        <CardContent className="mt-2 space-y-2 px-4 md:mt-0 md:py-4">
+          <div className="flex h-10 w-full items-center justify-between">
             <CardTitle>{product.name}</CardTitle>
             <p className="text-muted-foreground">
               {formatCurrency(product.price)}
             </p>
           </div>
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
+            <div className="flex h-8 items-center">
               {product.rating > 4.5 ? (
                 Array.from({ length: 5 }).map((_, i) => (
                   <StarFilledIcon key={i} className="text-primary" />
@@ -58,7 +58,7 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
             )}
           </div>
         </CardContent>
-        <CardFooter className="mt-0 px-4 md:px-6">
+        <CardFooter className=" px-4">
           <Button variant="outline">Add to Cart</Button>
         </CardFooter>
       </Card>

@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Skeleton } from "../ui/skeleton";
 
 const AllProductSkeleton = () => {
   return Array.from({ length: 8 }).map((_, i) => (
@@ -14,13 +14,13 @@ const AllProductSkeleton = () => {
         </div>
       </CardHeader>
       <CardContent className="mt-2 space-y-2 px-6 md:mt-0 md:px-6 md:py-4">
-        <div className=" w-full space-y-2">
-          <Skeleton className="h-4 w-[200px]" />
-          <Skeleton className="h-4 w-[230px]" />
-        </div>
         <div className="flex items-center gap-1">
           <Skeleton className="h-12 w-12 rounded-full" />
           <Skeleton className="h-4 w-[180px]" />
+        </div>
+        <div className=" w-full space-y-2">
+          <Skeleton className="h-4 w-[230px]" />
+          <Skeleton className="h-4 w-[230px]" />
         </div>
       </CardContent>
     </Card>

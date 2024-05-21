@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import ProductDetails from "@/components/ProductDetails";
+import ProductDetails from "@/components/products/ProductDetails";
 
 const Product = () => {
   const { state } = useLocation();

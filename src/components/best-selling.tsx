@@ -8,7 +8,7 @@ import {
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
-import FirstProduct from "./first-products";
+import FirstProduct from "./products/FirstProducts";
 
 const BestSelling = () => {
   return (

@@ -4,7 +4,7 @@ import Hero from "@/components/hero";
 
 const Landing = () => {
   return (
-    <main className="h-dvh bg-green-200 font-poppins">
+    <main className="h-dvh bg-green-200 font-poppins dark:bg-background">
       <Hero />
       <BestSelling />
       <Discount />

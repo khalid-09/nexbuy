@@ -48,11 +48,11 @@
 // export default AllProducts;
 
 import products from "@/data/products";
-import AllProductSkeleton from "@/components/all-product-skelton";
+import AllProductSkeleton from "@/components/products/AllProductSkelton";
 import { useState, useEffect } from "react";
 import Seo from "@/components/seo";
 import ProductCard from "@/components/ui/product-card";
-import ProductPagination from "@/components/ProductPagination";
+import ProductPagination from "@/components/products/ProductPagination";
 
 const PAGE_SIZE = 8;
 
@@ -77,7 +77,7 @@ const AllProducts = () => {
         type="Clothing, Laptops, Mobiles, Furnitures, Skincare Products,"
       />
       <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
-        <h2 className="mb-4 font-poet text-3xl">All Products</h2>
+        <h2 className="mb-4 text-3xl">All Products</h2>
         <div className=" grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4">
           {loading && <AllProductSkeleton />}
           {!loading &&

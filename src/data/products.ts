@@ -116,7 +116,7 @@ const products: Product[] = [
   {
     id: 9,
     category: "earbuds",
-    name: "Boad Earbuds",
+    name: "Boat Earbuds",
     isAvailable: true,
     price: 1000,
     rating: 4.5,

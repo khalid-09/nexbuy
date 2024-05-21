@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 const PAGE_SIZE = 8;

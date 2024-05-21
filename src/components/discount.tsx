@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Discount = () => {
   return (
     <section className="m-auto mt-10 flex w-full max-w-4xl flex-col gap-6 px-4 pb-20 md:mt-14 md:flex-row">
-      <Card className="w-full bg-lime-200 px-4 py-6 ">
+      <Card className="w-full bg-lime-200 px-4 py-6 dark:bg-card ">
         <CardHeader>
           <CardDescription className="space-x-3">
             <span>Exclusive Offer </span>
@@ -34,7 +34,7 @@ const Discount = () => {
           </Button>
         </CardFooter>
       </Card>
-      <Card className="w-full bg-green-200 px-4  py-6">
+      <Card className="w-full bg-green-200 px-4 py-6 dark:bg-background  dark:bg-card">
         <CardHeader>
           <CardDescription>
             <span>Regular Offer </span>

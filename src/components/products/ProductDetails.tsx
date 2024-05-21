@@ -26,7 +26,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
   const [count, setCount] = useState(1);
 
   return (
-    <Card className="border-none shadow-none">
+    <Card className="border-none shadow-none dark:bg-background md:ml-6 md:mt-8">
       <CardHeader>
         <CardTitle className="text-2xl">{product.name}</CardTitle>
         <CardDescription>{product.shortDescription}</CardDescription>

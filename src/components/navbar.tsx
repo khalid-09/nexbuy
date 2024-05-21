@@ -6,6 +6,7 @@ import { DividerVerticalIcon } from "@radix-ui/react-icons";
 import MobileNav from "./mobile-nav";
 import Logo from "./logo";
 import { links } from "@/constants";
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   return (
@@ -26,7 +27,7 @@ const Navbar = () => {
       </ul>
       <Input placeholder="Search Product." className="md:w-1/4" />
       <div className="flex  items-center gap-1 md:gap-2">
-        <Link to="/account" className="flex items-center gap-1">
+        <Link to="/account" className="flex items-center gap-2">
           <Avatar>
             <AvatarImage src="/pfp.jpeg" />
             <AvatarFallback>CN</AvatarFallback>
@@ -34,10 +35,11 @@ const Navbar = () => {
           <span className="hidden sm:block">Luffy</span>
         </Link>
         <DividerVerticalIcon className="h-6 w-6" />
-        <div className="hidden items-center gap-1 md:flex ">
+        <div className="ml-2 hidden items-center gap-1 md:flex ">
           <FaCartShopping />
           <Link to="/cart">Cart</Link>
         </div>
+        <ModeToggle />
         <div className="block md:hidden">
           <MobileNav />
         </div>
