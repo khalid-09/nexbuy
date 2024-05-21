@@ -25,7 +25,7 @@ const AllProducts = () => {
       <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {loading && <AllProductSkeleton />}
         {products.slice(0, 8).map((product) => (
-          <Link to={`/products/${product.id}`} key={product.id}>
+          <Link state={product} to={`/products/${product.id}`} key={product.id}>
             <Card className="overflow-hidden">
               <CardHeader className="relative mb-0 h-56">
                 <img

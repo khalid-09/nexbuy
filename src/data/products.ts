@@ -74,7 +74,7 @@ const products: Product[] = [
   {
     id: 6,
     category: "books",
-    name: "Atomi Habits",
+    name: "Atomic Habits",
     isAvailable: true,
     price: 500,
     rating: 4.8,

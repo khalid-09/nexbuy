@@ -38,7 +38,7 @@ const FirstProduct = () => {
     <>
       {loading && <FirstProductSkeleton />}
       {firstProducts.map((product) => (
-        <Link to={`/products/${product.id}`} key={product.id}>
+        <Link to={`/products/${product.id}`} state={product} key={product.id}>
           <Card className="overflow-hidden">
             <CardHeader className="relative mb-0 h-56">
               <img
