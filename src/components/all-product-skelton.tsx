@@ -14,7 +14,7 @@ const AllProductSkeleton = () => {
         </div>
       </CardHeader>
       <CardContent className="mt-2 space-y-2 px-6 md:mt-0 md:px-6 md:py-4">
-        <div className="flex w-full items-center justify-between">
+        <div className=" w-full space-y-2">
           <Skeleton className="h-4 w-[200px]" />
           <Skeleton className="h-4 w-[230px]" />
         </div>
