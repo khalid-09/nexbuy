@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import { formatCurrency } from "@/lib/utils";
 import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
-import { Badge } from "./badge";
-import { Button } from "./button";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 import { Product } from "@/data/types";
 
 interface ProductCardProps {

@@ -4,7 +4,7 @@ import products from "@/data/products";
 import { Product } from "@/data/types";
 
 import ProductCardSkeleton from "./ProductCardSkeleton";
-import ProductCard from "../ui/product-card";
+import ProductCard from "./ProductCard";
 
 const getOnlyClothes = (products: Product[]): Product[] => {
   return products.filter((product) => product.category === "clothes");

@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
-import Logo from "./logo";
+import Logo from "./Logo";
 
 import { TextAlignRightIcon } from "@radix-ui/react-icons";
 import { links } from "@/constants";

@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import type { Product } from "@/data/types";
 
-import ProductBreadcrumbs from "@/components/breadcrumbs";
-import Seo from "@/components/seo";
+import ProductBreadcrumbs from "@/components/Breadcrumbs";
+import Seo from "@/components/Seo";
 import {
   Carousel,
   CarouselContent,
@@ -23,6 +23,8 @@ const Product = () => {
         title={product.name}
         description={product.shortDescription}
         type={product.category}
+        image={product.images.at(1)!}
+        url={`https://nexbuy.vercel.app/products/${product.id}`}
       />
       <section className="m-auto max-w-6xl space-y-6 px-4 font-poppins md:space-y-0">
         <div className="flex justify-center md:mb-24">

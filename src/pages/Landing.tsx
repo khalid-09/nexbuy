@@ -1,7 +1,7 @@
-import BestSelling from "@/components/best-selling";
-import Discount from "@/components/discount";
-import Footer from "@/components/footer";
-import Hero from "@/components/hero";
+import BestSelling from "@/components/BestSelling";
+import Discount from "@/components/Discount";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 
 const Landing = () => {
   return (

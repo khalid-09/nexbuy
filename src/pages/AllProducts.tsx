@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useDelay } from "@/hooks/useDelay";
 
 import products from "@/data/products";
-import Seo from "@/components/seo";
-import ProductCard from "@/components/ui/product-card";
+import Seo from "@/components/Seo";
+import ProductCard from "@/components/products/ProductCard";
 import ProductPagination from "@/components/products/ProductPagination";
 import ProductCardSkeleton from "@/components/products/ProductCardSkeleton";
 
@@ -22,6 +22,8 @@ const AllProducts = () => {
         title="All Products"
         description="List of all products available at NEXBUY. Buy now!"
         type="Clothing, Laptops, Mobiles, Furnitures, Skincare Products,"
+        image="hero4.png"
+        url="https://nexbuy.vercel.app/products"
       />
       <section className="m-auto max-w-6xl px-4 py-10 font-poppins">
         <h2 className="mb-4 px-2 text-3xl">All Products</h2>

@@ -4,7 +4,7 @@ import { Category, Product } from "@/data/types";
 import products from "@/data/products";
 
 import ProductCardSkeleton from "./ProductCardSkeleton";
-import ProductCard from "../ui/product-card";
+import ProductCard from "./ProductCard";
 
 const getFirstProductFromEachCategory = (products: Product[]): Product[] => {
   const seenCategories = new Set<Category>();
