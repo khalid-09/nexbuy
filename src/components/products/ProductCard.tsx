@@ -64,8 +64,9 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
             )}
           </div>
         </CardContent>
-        <CardFooter className=" px-4">
+        <CardFooter className="flex items-center justify-between px-4">
           <Button variant="outline">Add to Cart</Button>
+          <Badge className="capitalize">{product.category}</Badge>
         </CardFooter>
       </Card>
     </Link>
