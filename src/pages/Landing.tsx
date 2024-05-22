@@ -1,5 +1,6 @@
 import BestSelling from "@/components/best-selling";
 import Discount from "@/components/discount";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 
 const Landing = () => {
@@ -8,6 +9,7 @@ const Landing = () => {
       <Hero />
       <BestSelling />
       <Discount />
+      <Footer />
     </main>
   );
 };

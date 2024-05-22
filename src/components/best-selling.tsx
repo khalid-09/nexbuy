@@ -1,6 +1,6 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FirstProduct from "./products/FirstProducts";
 import OnlyClothes from "./products/OnlyClothes";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const BestSelling = () => {
   return (

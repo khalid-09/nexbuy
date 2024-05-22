@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+
 import { Input } from "./ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaCartShopping } from "react-icons/fa6";
 import { DividerVerticalIcon } from "@radix-ui/react-icons";
 import MobileNav from "./mobile-nav";
 import Logo from "./logo";
+
 import { links } from "@/constants";
 import { ModeToggle } from "./mode-toggle";
 

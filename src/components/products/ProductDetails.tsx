@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import { Product } from "@/data/types";
+import { formatCurrency } from "@/lib/utils";
+
 import {
   Card,
   CardContent,
@@ -7,17 +12,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { FaCircleCheck, FaWhatsapp } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { formatCurrency } from "@/lib/utils";
 import {
   CrossCircledIcon,
   StarFilledIcon,
   StarIcon,
 } from "@radix-ui/react-icons";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { FaCircleCheck, FaWhatsapp } from "react-icons/fa6";
 interface ProductDetailsProps {
   product: Product;
 }

@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-// import { Badge } from "./ui/badge";
+import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -8,17 +10,17 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+
 import { formatCurrency } from "@/lib/utils";
-import { Link } from "react-router-dom";
 
 const Discount = () => {
   return (
-    <section className="m-auto mt-10 flex w-full max-w-4xl flex-col gap-6 px-4 pb-20 md:mt-14 md:flex-row">
+    <section className="m-auto  mt-20 flex w-full max-w-4xl flex-col gap-6 px-4 pb-32 md:mt-14 md:flex-row">
       <Card className="w-full bg-lime-200 px-4 py-6 dark:bg-card ">
         <CardHeader>
           <CardDescription className="space-x-3">
             <span>Exclusive Offer </span>
-            {/* <Badge>10% OFF</Badge> */}
+            <Badge>10% OFF</Badge>
           </CardDescription>
           <CardTitle className="text-3xl">
             Best Online Deals, Free Stuff

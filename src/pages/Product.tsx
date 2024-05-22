@@ -1,7 +1,8 @@
-import ProductBreadcrumbs from "@/components/breadcrumbs";
-import Seo from "@/components/seo";
 import { useLocation } from "react-router-dom";
 import type { Product } from "@/data/types";
+
+import ProductBreadcrumbs from "@/components/breadcrumbs";
+import Seo from "@/components/seo";
 import {
   Carousel,
   CarouselContent,

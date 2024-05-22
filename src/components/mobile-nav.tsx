@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   Sheet,
   SheetClose,
@@ -9,10 +11,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
-import { TextAlignRightIcon } from "@radix-ui/react-icons";
 import Logo from "./logo";
+
+import { TextAlignRightIcon } from "@radix-ui/react-icons";
 import { links } from "@/constants";
-import { Link } from "react-router-dom";
 
 const MobileNav = () => {
   return (
