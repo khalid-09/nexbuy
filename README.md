@@ -1,30 +1,95 @@
-# React + TypeScript + Vite
+# NexBuy.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://nexbuy.vercel.app/
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Nexbuy](#project-name)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Development Server](#running-the-development-server)
+    - [Building the Project](#building-the-project)
+    - [Screenshots](#screenshots)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Ensure you have the following installed:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/khalid-09/nexbuy.git
+
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd nexbuy
+
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm i
+   ```
+
+   or if you are using yarn
+
+   ```bash
+   yarn
+
+   ```
+
+### Running the development server
+
+```bash
+  npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+or if you are using yarn :
+
+```bash
+  yarn dev
+```
+
+### Screenshots
+
+# Web View:
+
+![Home Page](public/screenshots/w1.png)
+![Home Page](public/screenshots/w2.png)
+![Home Page](public/screenshots/w3.png)
+![Home Page](public/screenshots/w4.png)
+![Home Page](public/screenshots/w5.png)
+![Home Page](public/screenshots/w6.png)
+![Proucts Page](public/screenshots/w7.png)
+![Products Page](public/screenshots/w8.png)
+![Single Product Page](public/screenshots/w9.png)
+
+# Mobile view:
+
+<div align="center">
+  <img src="public/screenshots/m1.jpg" alt="Home Page" width="45%" />
+  <img src="public/screenshots/m6.jpg" alt="Products Page" width="45%" />
+</div>
+
+<div align="center">
+  <img src="public/screenshots/m2.jpg" alt="Home Page" width="45%" />
+  <img src="public/screenshots/m3.jpg" alt="Products Page" width="45%" />
+</div>
+
+<div align="center">
+  <img src="public/screenshots/m5.jpg" alt="Home Page" width="45%" />
+  <img src="public/screenshots/m4.jpg" alt="Products Page" width="45%" />
+</div>
