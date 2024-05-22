@@ -27,6 +27,10 @@ interface ProductDetailsProps {
 const ProductDetails = ({ product }: ProductDetailsProps) => {
   const [count, setCount] = useState(1);
 
+  const phoneNumber = "+918787878787";
+  const message = `Hey, I am interested in buying ${product.name} of ${formatCurrency(product.price)}.`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <Card className="border-none shadow-none dark:bg-background md:ml-6 md:mt-8">
       <CardHeader>
@@ -97,10 +101,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
           </Button>
         </div>
         <Button size="lg" className="space-x-2" asChild>
-          <Link
-            to={`https://web.whatsapp.com/send?phone=8787878787&text=Hey, I am interested in buying ${product.name}-${product.price}.&app_absent=0`}
-            target="_blank"
-          >
+          <Link to={whatsappUrl} rel="noopener noreferrer" target="_blank">
             <FaWhatsapp className="h-6 w-6" />
             <span>Inquire on WhatsApp!</span>
           </Link>
