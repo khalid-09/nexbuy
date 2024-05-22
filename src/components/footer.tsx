@@ -4,15 +4,15 @@ const Footer = () => {
   return (
     <footer className="m-auto max-w-6xl p-4">
       <div className="flex flex-col items-start justify-center gap-4 border-b-2 pb-10 font-poppins md:flex-row">
-        <div className="flex w-full flex-col items-center space-y-4 md:w-2/6 md:items-start">
+        <div className="w-full space-y-4 md:w-2/6">
           <Logo />
-          <p className="text-center text-sm text-muted-foreground md:text-start">
+          <p className="text-sm text-muted-foreground">
             Discover a world of products curated just for you. From the latest
             tech gadgets to stylish fashion trends, our handpicked selections
             cater to your every need.
           </p>
         </div>
-        <div className="flex w-full flex-col items-center space-y-4 md:w-1/6 md:items-start">
+        <div className="hidden w-full flex-col items-center space-y-4 md:flex md:w-1/6 md:items-start">
           <p className="text-center text-xl font-medium md:text-start ">
             Get to know us
           </p>
@@ -24,7 +24,7 @@ const Footer = () => {
             <li>Help Center</li>
           </ul>
         </div>
-        <div className="flex w-full flex-col items-center space-y-4 md:w-1/6 md:items-start">
+        <div className="hidden w-full flex-col items-center space-y-4 md:flex md:w-1/6 md:items-start">
           <p className="text-center text-xl font-medium md:text-start ">
             For consumers
           </p>
@@ -36,7 +36,7 @@ const Footer = () => {
             <li>Shop Checkout</li>
           </ul>
         </div>
-        <div className="flex w-full flex-col items-center space-y-4 md:w-1/6 md:items-start">
+        <div className="hidden w-full flex-col items-center space-y-4 md:flex md:w-1/6 md:items-start">
           <p className="text-center text-xl font-medium md:text-start ">
             Best selling
           </p>
@@ -48,7 +48,7 @@ const Footer = () => {
             <li>Skincare</li>
           </ul>
         </div>
-        <div className="flex w-full flex-col items-center space-y-4 md:w-1/6 md:items-start">
+        <div className="hidden w-full flex-col items-center space-y-4 md:flex md:w-1/6 md:items-start">
           <p className="text-center text-xl font-medium md:text-start ">Help</p>
           <ul className="flex flex-row flex-wrap items-center gap-4 space-y-0 text-sm text-muted-foreground md:flex-col md:items-start md:gap-0 md:space-y-2">
             <li>Security</li>
