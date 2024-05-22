@@ -1,8 +1,8 @@
 import { Category, Product } from "@/data/types";
 import products from "@/data/products";
-import FirstProductSkeleton from "./FirstProductSkeleton";
-import { useEffect, useState } from "react";
+import ProductCardSkeleton from "./ProductCardSkeleton";
 import ProductCard from "../ui/product-card";
+import { useDelay } from "@/hooks/useDelay";
 
 const getFirstProductFromEachCategory = (products: Product[]): Product[] => {
   const seenCategories = new Set<Category>();
@@ -18,20 +18,15 @@ const getFirstProductFromEachCategory = (products: Product[]): Product[] => {
 const firstProducts = getFirstProductFromEachCategory(products);
 
 const FirstProduct = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  const { loading, setLoading } = useDelay();
 
   return (
     <>
-      {loading && <FirstProductSkeleton />}
+      {loading && <ProductCardSkeleton />}
       {!loading &&
         firstProducts.map((product) => (
           <ProductCard
+            key={product.id}
             product={product}
             loading={loading}
             setLoading={setLoading}

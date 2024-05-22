@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { Badge } from "./ui/badge";
+// import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -18,7 +18,7 @@ const Discount = () => {
         <CardHeader>
           <CardDescription className="space-x-3">
             <span>Exclusive Offer </span>
-            <Badge>10% OFF</Badge>
+            {/* <Badge>10% OFF</Badge> */}
           </CardDescription>
           <CardTitle className="text-3xl">
             Best Online Deals, Free Stuff

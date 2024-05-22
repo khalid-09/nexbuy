@@ -25,7 +25,7 @@ const ProductCard = ({ product, loading, setLoading }: ProductCardProps) => {
             className={`absolute inset-0 h-full w-full object-cover ${
               loading ? "blur-sm" : ""
             }`}
-            src={product.images[0]}
+            src={product.images.at(0)}
             onLoad={handleImageLoad}
             alt={product.name}
             loading="lazy"

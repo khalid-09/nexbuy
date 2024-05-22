@@ -12,9 +12,12 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "A combo of 3 shirts for the price of 2",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/clothes/shirts/shirt${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/04/07/5f/04075f93e8d58c31bead68971d885d8c.jpg",
+      "https://i.pinimg.com/236x/f0/49/ac/f049acaeea01538545bdb1a7a0c29229.jpg",
+      "https://i.pinimg.com/236x/cc/26/03/cc2603fba67580b695b11ffd2246d641.jpg",
+      "https://i.pinimg.com/236x/e7/33/82/e73382b3f0c63462e65ae8bf0b2d1469.jpg",
+    ],
   },
   {
     id: 2,
@@ -26,9 +29,12 @@ const products: Product[] = [
     discount: 5,
     reviewCount: 5,
     shortDescription: "A warm hoodie for the cold weather",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/clothes/hoodies/hoodie${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/ec/48/7e/ec487ec339cacc808f02b7ec830ab2c7.jpg",
+      "https://i.pinimg.com/236x/48/ee/7a/48ee7a8466eb7d1786f10b9c1daa9029.jpg",
+      "https://i.pinimg.com/236x/36/2e/39/362e39ea579633e474715a0fecd117b4.jpg",
+      "https://i.pinimg.com/236x/4e/96/15/4e961510aa048d050c206bc317632306.jpg",
+    ],
   },
   {
     id: 3,
@@ -39,9 +45,12 @@ const products: Product[] = [
     rating: 4.8,
     reviewCount: 15,
     shortDescription: "A collection of stylish caps",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/clothes/caps/cap${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/da/2f/46/da2f4623ff9f24bda2cc967138471602.jpg",
+      "https://i.pinimg.com/236x/89/7f/88/897f8819d47dd6a418054bb29f823431.jpg",
+      "https://i.pinimg.com/236x/49/6c/79/496c792c9656e6993f1c12531830f18d.jpg",
+      "https://i.pinimg.com/236x/fd/8d/4b/fd8d4b84da7e7cf1f431919e91f11b46.jpg",
+    ],
   },
   {
     id: 4,
@@ -52,9 +61,12 @@ const products: Product[] = [
     rating: 4.8,
     reviewCount: 12,
     shortDescription: "A collection of stylish & modern jackets",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/clothes/jackets/jacket${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/474x/d8/a2/1f/d8a21f5c799c19af18a99a62d187cd32.jpg",
+      "https://i.pinimg.com/236x/71/a5/cc/71a5cc69d15dba43aea4b3b7a0772799.jpg",
+      "https://i.pinimg.com/236x/27/9a/cf/279acf3967dd8397bd2992b76f4d4234.jpg",
+      "https://i.pinimg.com/236x/43/dd/ef/43ddef263c52f47e2f1e470e5cc032b7.jpg",
+    ],
   },
   {
     id: 5,
@@ -65,9 +77,12 @@ const products: Product[] = [
     rating: 4.5,
     reviewCount: 17,
     shortDescription: "A collection of statement pants",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/clothes/pants/pant${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/5a/99/72/5a9972aea56182f274f9c2d15e8b6362.jpg",
+      "https://i.pinimg.com/236x/4a/d7/7e/4ad77e9847107df71a2e551197312b14.jpg",
+      "https://i.pinimg.com/236x/f4/96/15/f49615dd3d07099b7729b44cfd5ecb4c.jpg",
+      "https://i.pinimg.com/236x/f0/7d/2d/f07d2d27e3583dda7bec4614da3761b2.jpg",
+    ],
   },
 
   // Books
@@ -81,9 +96,11 @@ const products: Product[] = [
     reviewCount: 15,
     shortDescription: "A book on how to build good habits and break bad ones",
     discount: 10,
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/books/atomic/book${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/474x/01/1c/ec/011ceca68df26d7dd3bd9acfff1020e1.jpg",
+      "https://i.pinimg.com/236x/4b/ec/66/4bec66080ef73e8cc5469c5efdf219fa.jpg",
+      "https://i.pinimg.com/236x/43/7d/5f/437d5f2f5ae12f538b6006b5aff4445d.jpg",
+    ],
   },
   {
     id: 7,
@@ -94,9 +111,11 @@ const products: Product[] = [
     rating: 4.5,
     reviewCount: 10,
     shortDescription: "A book on how to become rich",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/books/think/book${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/08/35/ef/0835efaf9f98c7308cad0c1471e26b48.jpg",
+      "https://i.pinimg.com/236x/94/7f/b4/947fb462480e70129d1099c990e1e881.jpg",
+      "https://i.pinimg.com/236x/3c/24/57/3c24574decb362b2a9d21e0b8645f0ca.jpg",
+    ],
   },
   {
     id: 8,
@@ -107,9 +126,11 @@ const products: Product[] = [
     rating: 4.6,
     reviewCount: 12,
     shortDescription: "A book on daily financial education",
-    images: Array.from({ length: 2 }).map(
-      (_, i) => `/books/rich/book${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/36/b9/84/36b984fc35f2aa04b397d2671ad28ab0.jpg",
+      "https://i.pinimg.com/236x/53/61/eb/5361eb80ac0bdca85d2f5650acc3ee6c.jpg",
+      "https://i.pinimg.com/236x/04/20/a3/0420a3bfa8dfcf08479604c06c9945b9.jpg",
+    ],
   },
 
   // Earbuds
@@ -123,9 +144,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Earbuds",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/boat/ear${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/f7/5f/b0/f75fb01b1be709e17735d427a38f0452.jpg",
+      "https://i.pinimg.com/236x/ee/a2/16/eea21607f58b6a468c9bc2e5b51cb418.jpg",
+      "https://i.pinimg.com/236x/e0/d8/6a/e0d86a821bea1f2450590e98e1a1babf.jpg",
+    ],
   },
   {
     id: 10,
@@ -137,9 +160,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Speakers",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/marshall/ear${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/d8/8f/70/d88f70099051535ffd93b37a56fe18da.jpg",
+      "https://i.pinimg.com/236x/d6/a2/e9/d6a2e91bc67af7b56727e248835af106.jpg",
+      "https://i.pinimg.com/236x/5d/8e/e7/5d8ee731dbe942b7ebcfe193725b86ae.jpg",
+    ],
   },
   {
     id: 11,
@@ -151,9 +176,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Headphones",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/skullcandy/ear${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/90/5a/14/905a14a834f3591cdb24a07f284a9ec8.jpg",
+      "https://i.pinimg.com/236x/29/e4/a6/29e4a6d016ba2a8089cfbd069880f8b8.jpg",
+      "https://i.pinimg.com/236x/f7/f5/4a/f7f54a5337b2b579876200de63f4f01f.jpg",
+    ],
   },
   {
     id: 12,
@@ -165,9 +192,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Airpods",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/airpods/ear${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/38/aa/7e/38aa7ea284e99fa0615546ee4ecc6a63.jpg",
+      "https://i.pinimg.com/236x/2f/20/fc/2f20fca687f126b2666bac2423537b90.jpg",
+      "https://i.pinimg.com/236x/a7/57/66/a7576678eee6855100d8ad180ae6dd2e.jpg",
+    ],
   },
   {
     id: 13,
@@ -179,9 +208,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Headphones",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/earbuds/sony/ear${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/e9/05/c5/e905c536c865d8b9c93d184aef1e45ec.jpg",
+      "https://i.pinimg.com/236x/f1/80/16/f1801684feaebd75f60f471289d6f041.jpg",
+      "https://i.pinimg.com/474x/9f/9b/62/9f9b6256ec5628b547820a9fb9be87ff.jpg",
+    ],
   },
 
   // Furnitures
@@ -195,9 +226,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Beds",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/furniture/beds/bed${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/33/68/4f/33684fe814b9a4725974da5e9ed3a0d1.jpg",
+      "https://i.pinimg.com/236x/82/c8/2c/82c82c6888fd3785a00edff7adc1eba6.jpg",
+      "https://i.pinimg.com/236x/b1/04/5f/b1045fdf96ef94318d120bdd917ded2d.jpg",
+    ],
   },
   {
     id: 15,
@@ -209,9 +242,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Sofas",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/furniture/sofas/sofa${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/b0/6a/9d/b06a9d43074d538dd2485f5ede9d4666.jpg",
+      "https://i.pinimg.com/236x/40/78/20/4078202662d91e6e5496d3f650572a69.jpg",
+      "https://i.pinimg.com/236x/3e/51/16/3e51167ea4b863f14346455088ba910f.jpg",
+    ],
   },
   {
     id: 16,
@@ -223,9 +258,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Tables",
-    images: Array.from({ length: 5 }).map(
-      (_, i) => `/furniture/tables/table${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/7f/42/06/7f42066e6b12594883366a2cc6d8b484.jpg",
+      "https://i.pinimg.com/236x/e1/7c/b6/e17cb6a1056a7ae4b6d88773e208067f.jpg",
+      "https://i.pinimg.com/236x/bd/04/e4/bd04e4a9107029ef41ee271bc16e7e27.jpg",
+    ],
   },
 
   // Laptops
@@ -239,9 +276,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Laptops",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/laptops/macbooks/mackbook${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/52/00/8b/52008b08ddd32a6d5cdce3f29fb25c2a.jpg",
+      "https://i.pinimg.com/236x/b2/9a/a4/b29aa46d4502bdebb61c2b197a4f15af.jpg",
+      "https://i.pinimg.com/236x/30/f8/50/30f85031561615c6d9b650d324833642.jpg",
+    ],
   },
   {
     id: 18,
@@ -253,9 +292,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Laptops",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/laptops/asus/rog${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/38/65/94/386594135756b1c8572b20991e9dd963.jpg",
+      "https://i.pinimg.com/236x/31/bd/19/31bd19deecc3b76212a59442fdc54141.jpg",
+      "https://i.pinimg.com/236x/5b/a8/8f/5ba88f91b76f355631cb134ca77feb43.jpg",
+    ],
   },
   {
     id: 19,
@@ -267,9 +308,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Laptops",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/laptops/lenovo/lenovo${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/e0/13/57/e01357380af6610fedc77f0e006f18ae.jpg",
+      "https://i.pinimg.com/236x/22/ec/c0/22ecc017ebe47613c74e7675969138f4.jpg",
+      "https://i.pinimg.com/236x/a8/dd/89/a8dd897d4a2fecb93c7dc0f203b11646.jpg",
+    ],
   },
   {
     id: 20,
@@ -281,9 +324,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Laptops",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/laptops/hp/hp${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/10/4a/97/104a979c02357cb9905162a10c6a27ce.jpg",
+      "https://i.pinimg.com/736x/cc/ce/38/ccce386b499231e62dfc93b5801f4d23.jpg",
+      "https://i.pinimg.com/236x/39/53/ee/3953eee234dfaa0b1cb9271928f90f4c.jpg",
+    ],
   },
 
   // Mobiles
@@ -297,9 +342,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Mobiles",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/mobiles/iphone/phone${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/736x/a4/cf/db/a4cfdb1d7745e89403bcaa19f14f0b94.jpg",
+      "https://i.pinimg.com/474x/c4/14/2d/c4142d7338d961e80d8ec0675e58f2fa.jpg",
+      "https://i.pinimg.com/236x/a0/0c/63/a00c635347abe1847f5a5097419ae694.jpg",
+    ],
   },
   {
     id: 22,
@@ -311,9 +358,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Mobiles",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/mobiles/samsung/phone${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/474x/4f/31/2d/4f312d2d8b7a69f696564959d541764d.jpg",
+      "https://i.pinimg.com/474x/15/89/f8/1589f8017c3d5f7fbf58845416631e6f.jpg",
+      "https://i.pinimg.com/236x/8f/36/ab/8f36ab8ce938eb7ff3099296ca3cd337.jpg",
+    ],
   },
   {
     id: 23,
@@ -325,9 +374,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Mobiles",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/mobiles/pixel/phone${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/f7/a5/f8/f7a5f8c255d3800e63df8edd152df0ef.jpg",
+      "https://i.pinimg.com/474x/75/a2/d0/75a2d0836f3df59130e012b2861b55bb.jpg",
+      "https://i.pinimg.com/236x/db/ab/76/dbab762171bfb375b55b8bb7371bf9f4.jpg",
+    ],
   },
 
   // Skincare
@@ -341,9 +392,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Cleanser",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/skincare/cetaphil/sc${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/95/7b/b2/957bb2ca650186adca6b537e1ea55b03.jpg",
+      "https://i.pinimg.com/236x/2c/9e/cf/2c9ecfc4166461b92463c067c56b08be.jpg",
+      "https://i.pinimg.com/236x/2b/25/6d/2b256d0483f4233498df4affe00e3cdf.jpg",
+    ],
   },
   {
     id: 25,
@@ -355,9 +408,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Serum",
-    images: Array.from({ length: 4 }).map(
-      (_, i) => `/skincare/ordinary/sc${i + 1}.jpg`,
-    ),
+    images: [
+      "https://i.pinimg.com/236x/38/ad/5e/38ad5ecc22028c618ecdcba3a8cba03f.jpg",
+      "https://i.pinimg.com/474x/f0/6f/81/f06f81ee32fd6f7ea8995840ca2c42fe.jpg",
+      "https://i.pinimg.com/236x/5a/d5/96/5ad596b3bec854873bb1cca9aa6bdab5.jpg",
+    ],
   },
   {
     id: 26,
@@ -369,9 +424,11 @@ const products: Product[] = [
     reviewCount: 10,
     discount: 10,
     shortDescription: "High Quality Mucin",
-    images: Array.from({ length: 3 }).map(
-      (_, i) => `/skincare/corsx/sc${i + 1}.jpeg`,
-    ),
+    images: [
+      "https://i.pinimg.com/564x/50/3c/7b/503c7b678996e5d52b64ef17f3101ed7.jpg",
+      "https://i.pinimg.com/236x/86/9b/de/869bde5ba757dda101b126a4b9c27aac.jpg",
+      "https://i.pinimg.com/236x/eb/c0/8c/ebc08c5c78d9fead0fd5646c2fdd36e2.jpg",
+    ],
   },
 ];
 
