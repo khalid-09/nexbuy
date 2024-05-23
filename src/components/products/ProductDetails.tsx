@@ -77,7 +77,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-3">
         <div className="flex items-center">
-          <div className="w-28 space-x-2">
+          <div className="flex w-28 items-center space-x-2 tabular-nums">
             <Button
               variant="outline"
               size="icon"
@@ -87,7 +87,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             >
               -
             </Button>
-            <span>{count}</span>
+            <div className="min-w-[]">{count}</div>
             <Button
               variant="outline"
               size="icon"

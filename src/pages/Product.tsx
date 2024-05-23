@@ -1,6 +1,13 @@
 import { useLocation } from "react-router-dom";
 import type { Product } from "@/data/types";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import ProductBreadcrumbs from "@/components/Breadcrumbs";
 import Seo from "@/components/Seo";
 import {
@@ -26,14 +33,14 @@ const Product = () => {
         image={product.images.at(1)!}
         url={`https://nexbuy.vercel.app/products/${product.id}`}
       />
-      <section className="m-auto max-w-6xl space-y-6 px-4 font-poppins md:space-y-0">
-        <div className="flex justify-center md:mb-24">
+      <section className="m-auto max-w-6xl px-4 font-poppins md:space-y-0">
+        <div className="mb-6 flex justify-center md:mb-24">
           <ProductBreadcrumbs
             productName={product.name}
             category={product.category}
           />
         </div>
-        <div className=" flex h-dvh flex-col items-center justify-start md:flex-row md:items-start md:justify-start ">
+        <div className=" flex flex-col items-center justify-start md:flex-row md:items-start md:justify-start ">
           <div className="w-full px-12 md:w-1/2">
             <Carousel
               opts={{
@@ -57,10 +64,20 @@ const Product = () => {
               <CarouselNext />
             </Carousel>
           </div>
-          <div className="px-6 md:px-0">
+          <div className=" px-6 md:px-0">
             <ProductDetails product={product} />
           </div>
         </div>
+        <Accordion
+          type="single"
+          collapsible
+          className="mb-10 w-full px-10 py-4 font-poppins"
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>More Details.</AccordionTrigger>
+            <AccordionContent>{product.productDetails}</AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </section>
     </>
   );

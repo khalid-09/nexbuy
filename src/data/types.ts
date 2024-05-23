@@ -18,4 +18,5 @@ export interface Product {
   reviewCount: number;
   shortDescription: string;
   discount?: number;
+  productDetails: string;
 }
