@@ -17,3 +17,5 @@ export const links: Link[] = [
   { to: "/contact", label: "Contact", logo: IoMdContact, disable: true },
   { to: "/about", label: "About", logo: FcAbout, disable: true },
 ];
+
+export const PAGE_SIZE = 8;
